@@ -66,7 +66,23 @@ public class MyDate implements DateInterface
 
 	public void yesterday()
 	{
-		
+		day--;
+		doWeek--;
+		if (day < 1)
+		{
+			month--;
+			day = 31;
+		}
+		if (month < 0)
+		{
+			year--;
+			month = 11;
+		}
+		if (doWeek < 0)
+		{
+			doWeek = 6;
+			
+		}
 	}
 	
 	public String toString()
