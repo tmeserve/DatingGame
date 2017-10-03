@@ -17,14 +17,16 @@ public class Year3000
 			// un-comment the next line to help with debugging
 			//System.out.println(d);
 		}
+		// at this point, d represents January 1, 3000
 		System.out.println(d);
-		d.set(1, 25, 2015, 0);
+		d.set(1, 25, 2015, 0); // sets date to Sunday, January, 25th, 2015
 		while(d.getYear() > 1799)
-		{
+		{	
 			d.yesterday();
+			// un-comment the next line to help with debugging
 			//System.out.println(d);
 		}
-		// at this point, d represents January 1, 3000
+		// at this point, d represents January 1, 1800
 		d.tomorrow();
 		System.out.println(d);
 	}
